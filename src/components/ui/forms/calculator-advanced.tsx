@@ -126,7 +126,10 @@ export default function ComplexCalculator({ setIsLoading }) {
                         { tag: "mono-phase", label: "Mono Phase" },
                         { tag: "three-phase", label: "Three Phase" },
                       ].map((el) => (
-                        <FormItem className="flex items-center space-x-3 space-y-0">
+                        <FormItem
+                          key={el.tag}
+                          className="flex items-center space-x-3 space-y-0"
+                        >
                           <FormControl>
                             <RadioGroupItem value={el.tag} />
                           </FormControl>
@@ -158,7 +161,10 @@ export default function ComplexCalculator({ setIsLoading }) {
                         { tag: "hybrid", label: "Hybrid" },
                         { tag: "power-connected", label: "Power Connected" },
                       ].map((el) => (
-                        <FormItem className="flex items-center space-x-3 space-y-0">
+                        <FormItem
+                          key={el.tag}
+                          className="flex items-center space-x-3 space-y-0"
+                        >
                           <FormControl>
                             <RadioGroupItem value={el.tag} />
                           </FormControl>
@@ -191,7 +197,10 @@ export default function ComplexCalculator({ setIsLoading }) {
                         { tag: "agm", label: "AGM" },
                         { tag: "gel", label: "GEL" },
                       ].map((el) => (
-                        <FormItem className="flex items-center space-x-3 space-y-0">
+                        <FormItem
+                          key={el.tag}
+                          className="flex items-center space-x-3 space-y-0"
+                        >
                           <FormControl>
                             <RadioGroupItem value={el.tag} />
                           </FormControl>
@@ -222,7 +231,10 @@ export default function ComplexCalculator({ setIsLoading }) {
                         { tag: "ground", label: "Ground" },
                         { tag: "roof", label: "Roof" },
                       ].map((el) => (
-                        <FormItem className="flex items-center space-x-3 space-y-0">
+                        <FormItem
+                          key={el.tag}
+                          className="flex items-center space-x-3 space-y-0"
+                        >
                           <FormControl>
                             <RadioGroupItem value={el.tag} />
                           </FormControl>

@@ -1,3 +1,4 @@
+import { NextResponse, NextRequest } from "next/server";
 import * as z from "zod";
 
 const schema = z.object({
@@ -7,7 +8,7 @@ const schema = z.object({
   battery: z.boolean().default(true),
 });
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   const data = schema.parse(await request.json());
   console.log(data);
 
@@ -38,5 +39,5 @@ export async function POST(request: Request) {
   // labor
   let laborCost = materialCost / 2;
 
-  return Response.json({ price: materialCost + laborCost + 150 });
+  return NextResponse.json({ price: materialCost + laborCost + 150 });
 }

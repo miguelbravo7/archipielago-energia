@@ -5,13 +5,7 @@ import { SocialLink } from "@/components/SocialLink";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 
-export const metadata = {
-  title: "Contact us - Archipielago",
-  description:
-    "Get in touch with our team to discuss how we can help bring your creative vision to life. Reach out to us for collaborative, innovative, and strategic web design and development services.",
-};
-
-export default function ContactPage() {
+export default function CalculatorPage() {
   const [isLoading, setIsLoading] = useState(false);
   return (
     <section className="px-4 py-12 sm:px-6 md:py-16 lg:px-8">
