@@ -13,28 +13,6 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
       },
-      /* 
-      colors: {
-        dark: {
-          950: "#ffffff", // unused
-
-          900: colors.orange[100], //"#FBEEEB", // background + buttons
-          800: colors.orange[200], //"#FFF6EE", // background 2 + card 2 + button gradient-from
-
-          700: colors.orange[300], //"#fe843b", // cards
-
-          600: colors.orange[400], //"#FFA570", // pill gradient-from
-
-          500: "#005CCE", // unused
-
-          400: colors.stone[600], //"#402E32", // subtexto + masked images
-
-          300: colors.stone[700], //"#54433A", // texto normal + icons
-
-          200: "#ff1111", // unused
-          100: "#ff1111", // unused
-        },
-      }, */
 
       width: {
         18: "4.5rem",
