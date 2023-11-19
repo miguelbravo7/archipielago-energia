@@ -10,7 +10,7 @@ const contact = {
     zip: "90001",
   },
   phone: "(415) 555-1234",
-  email: "hello@crator.com",
+  email: "hello@Archipielago.com",
 };
 
 const footerLinks = [
@@ -30,15 +30,15 @@ export const Footer = () => {
           <div className="flex items-center">
             <Link href="/" className="group text-2xl font-black lg:block">
               <span className="text-stone-700 transition duration-200 ease-in-out group-hover:text-stone-700">
-                Crator{" "}
+                Archipielago{" "}
               </span>
               <span className="text-stone-700 transition duration-200 ease-in-out group-hover:text-stone-700">
-                Studio
+                Energia
               </span>
             </Link>
           </div>
           <div className="mt-6 text-lg text-stone-700 md:mt-8">
-            © {new Date().getFullYear()} Crator Studio.
+            © {new Date().getFullYear()} Archipielago Energia.
             <br /> All rights reserved.
           </div>
         </div>

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { SocialLink } from "@/components/SocialLink";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 import staffImage1 from "/public/stock/team/team-01.jpg";
 import staffImage2 from "/public/stock/team/team-02.jpg";
 import staffImage3 from "/public/stock/team/team-03.jpg";
@@ -41,7 +43,7 @@ const team = [
   },
   {
     name: "Misha Mustafa",
-    job: "Studio Artist",
+    job: "Energia Artist",
     image: staffImage4,
     socials: [
       { name: "instagram", href: "#0" },
@@ -96,7 +98,7 @@ export const Team = () => {
               key={`team-member-${i}`}
               className="flex flex-col items-center"
             >
-              <Image
+              <Skeleton
                 src={member.image}
                 alt={member.name}
                 className="h-64 w-64 rounded-3xl object-cover object-center shadow-xl"

@@ -12,6 +12,7 @@ const navbar = {
   navigation: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
+    { label: "Calculator", href: "/calculator" },
     { label: "About", href: "/about" },
     { label: "Work", href: "/work" },
     { label: "Case study", href: "/work/nedia" },
@@ -111,7 +112,7 @@ export const Navbar = () => {
   }
 
   return (
-    <header className="overflow-hidden  bg-white">
+    <header className="overflow-hidden">
       <nav className="mx-auto flex max-w-7xl items-center px-4 py-6 sm:px-6 lg:px-8">
         <div className="flex w-full items-center justify-between">
           {/* Logo */}
@@ -122,10 +123,10 @@ export const Navbar = () => {
               className="group block text-2xl font-black md:hidden lg:block"
             >
               <span className="text-stone-700 transition duration-200 ease-in-out group-hover:text-stone-700">
-                Crator{" "}
+                Archipielago{" "}
               </span>
               <span className="text-stone-700 transition duration-200 ease-in-out group-hover:text-stone-700">
-                Studio
+                Energia
               </span>
             </Link>
 

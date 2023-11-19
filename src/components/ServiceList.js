@@ -52,13 +52,7 @@ export const ServiceList = () => {
                   </h2>
                 </div>
                 <div className="mt-8 flex text-left lg:mt-10">
-                  <SecondaryButton
-                    size="sm"
-                    gradient="from-orange-400 to-orange-300"
-                    href="/work"
-                  >
-                    View work
-                  </SecondaryButton>
+                  <SecondaryButton href="/work">View work</SecondaryButton>
                 </div>
               </div>
             </div>
@@ -69,7 +63,7 @@ export const ServiceList = () => {
               {services.map((item, index) => (
                 <div
                   data-aos="fade-right"
-                  data-aos-delay={index % 2 !== 1 ? "0" : "400"}
+                  data-aos-delay={index % 2 !== 1 ? "0" : "200"}
                   data-aos-duration="500"
                   key={`service-${index}`}
                   className="relative flex w-full flex-col"

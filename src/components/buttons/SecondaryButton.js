@@ -4,7 +4,7 @@ import clsx from "clsx";
 const containerStyles =
   "flex relative justify-center items-center px-8 w-auto text-base font-medium leading-snug text-stone-700 group";
 const circleStyles =
-  "absolute top-0 left-0 z-10 block w-full h-full transition-all ease-in-out rounded-full bg-gradient-to-r duration-250 md:w-14 md:group-hover:w-full";
+  "absolute top-0 left-0 z-10 block w-full h-full transition-all ease-in-out rounded-md bg-gradient-to-r duration-250 md:w-14 md:group-hover:w-full";
 
 const sizeStyles = {
   sm: "h-12 md:h-14",
@@ -14,7 +14,7 @@ const sizeStyles = {
 export function SecondaryButton({
   className,
   size = "lg",
-  gradient = "from-orange-200 to-white",
+  gradient = "from-orange-400 to-orange-300",
   href,
   children,
   ...props

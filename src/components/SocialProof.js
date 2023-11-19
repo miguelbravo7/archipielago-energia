@@ -1,6 +1,8 @@
 import Image from "next/image";
 import clsx from "clsx";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 import testimonialImage1 from "/public/stock/testimonials/testimonial-01.jpg";
 import testimonialImage2 from "/public/stock/testimonials/testimonial-02.jpg";
 import testimonialImage3 from "/public/stock/testimonials/testimonial-03.jpg";
@@ -26,28 +28,28 @@ const testimonials = [
     name: "Katy Perry",
     jobTitle: "CEO, Spotify",
     testimonial:
-      "Working with Crator was a game-changer. Their creative vision truly amplified our brand's potential.",
+      "Working with Archipielago was a game-changer. Their creative vision truly amplified our brand's potential.",
     image: testimonialImage1,
   },
   {
     name: "Henry Krasner",
     jobTitle: "CEO, Twitter",
     testimonial:
-      "Crator's innovative design solutions played a key role in our product's successful launch.",
+      "Archipielago's innovative design solutions played a key role in our product's successful launch.",
     image: testimonialImage2,
   },
   {
     name: "Bob Foster",
     jobTitle: "CEO, Amazon",
     testimonial:
-      "Crator's team is exceptional. Their commitment to quality exceeded our highest expectations.",
+      "Archipielago's team is exceptional. Their commitment to quality exceeded our highest expectations.",
     image: testimonialImage3,
   },
   {
     name: "Ema Roberts",
     jobTitle: "Founder, Dropbox",
     testimonial:
-      "From concept to execution, Crator's approach was seamlessly integrated and highly efficient.",
+      "From concept to execution, Archipielago's approach was seamlessly integrated and highly efficient.",
     image: testimonialImage4,
   },
 ];
@@ -125,7 +127,7 @@ export const SocialProof = () => {
                 {item.testimonial}
               </p>
               <footer className="mt-8">
-                <Image
+                <Skeleton
                   className="mx-auto h-12 w-12 rounded-full border-2 border-solid border-orange-200 border-opacity-75 object-cover object-center"
                   width={44}
                   height={44}

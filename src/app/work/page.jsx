@@ -5,9 +5,9 @@ import { CallToAction } from "@/components/CallToAction";
 import { getAllCaseStudies, getCaseStudyCategories } from "@/lib/caseStudies";
 
 export const metadata = {
-  title: "Our work - Crator",
+  title: "Our work - Archipielago",
   description:
-    "Crator has worked with a large array of clients in various industries: Consumer goods, fashion, b2b, entertainment, etc.",
+    "Archipielago has worked with a large array of clients in various industries: Consumer goods, fashion, b2b, entertainment, etc.",
 };
 
 export default function CaseStudiesPage() {

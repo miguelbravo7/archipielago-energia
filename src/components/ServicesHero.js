@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 import image1 from "/public/stock/hero-services-01.jpg";
 import image2 from "/public/stock/hero-services-02.jpg";
 
@@ -23,8 +25,8 @@ export const ServicesHero = () => {
             <div>
               <p className="max-w-lg text-xl text-stone-700 sm:max-w-3xl lg:mx-auto">
                 Elevating businesses with expertly designed and executed digital
-                strategies. Crator is here to help you conquer the online space
-                one pexel at a time.
+                strategies. Archipielago is here to help you conquer the online
+                space one pexel at a time.
               </p>
               <div className="mt-8 sm:flex sm:justify-start">
                 <PrimaryButton
@@ -37,13 +39,13 @@ export const ServicesHero = () => {
             </div>
             {/* Hero images */}
             <div className="mx-auto mt-10 grid sm:mx-0 sm:grid-cols-2 sm:gap-x-4 md:mt-12 lg:mt-0">
-              <Image
+              <Skeleton
                 src={image1}
                 alt="Service 01"
                 className="w-full rounded-3xl object-cover object-center shadow-xl lg:h-96"
                 sizes="(min-width: 1280px) 19rem, (min-width: 1024px) 25vw, (min-width: 640px) calc(50vw - 2rem), calc(100vw - 2rem)"
               />
-              <Image
+              <Skeleton
                 src={image2}
                 alt="Service 02"
                 className="mt-6 hidden w-full rounded-3xl object-cover object-center shadow-xl sm:mt-0 sm:block lg:h-96"

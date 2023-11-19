@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Icon } from "@/components/Icon";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 export const CaseStudyHero = ({ data }) => {
   return (
     <section className="px-4 py-12 sm:px-6 md:py-16 lg:px-8">
@@ -32,7 +34,7 @@ export const CaseStudyHero = ({ data }) => {
         </div>
         {/* Hero image */}
         <div className="aspect-h-1 aspect-w-2 relative mx-auto mt-12 rounded-3xl shadow-xl lg:mt-16">
-          <Image
+          <Skeleton
             className="absolute inset-0 h-full w-full rounded-3xl object-cover object-center align-middle"
             fill
             src={data.image}

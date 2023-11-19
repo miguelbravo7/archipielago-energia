@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import teamImage from "/public/stock/team/team.jpg";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 export const AboutHero = () => {
   return (
     <section className="px-4 pb-10 pt-12 sm:px-6 md:pb-12 md:pt-16 lg:px-8">
@@ -22,7 +24,7 @@ export const AboutHero = () => {
         </div>
         {/* Hero image */}
         <div className="mx-auto mt-12 max-w-screen-lg rounded-3xl shadow-xl">
-          <Image
+          <Skeleton
             className="rounded-3xl"
             src={teamImage}
             alt="Agency team"

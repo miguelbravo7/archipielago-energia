@@ -4,6 +4,8 @@ import clsx from "clsx";
 import { SecondaryButton } from "@/components/buttons/SecondaryButton";
 import { getAllCaseStudies } from "@/lib/caseStudies";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 export const FeaturedWork = () => {
   const caseStudies = getAllCaseStudies().filter(
     (caseStudy) => caseStudy.featured,
@@ -22,7 +24,7 @@ export const FeaturedWork = () => {
               index % 2 === 1 && "lg:ml-auto",
             )}
           >
-            <Image
+            <Skeleton
               src={caseStudy.image}
               alt={caseStudy.name}
               className="absolute inset-0 h-full w-full rounded-t-3xl object-cover object-center lg:rounded-3xl"

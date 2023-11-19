@@ -8,6 +8,8 @@ import { useState, useEffect } from "react";
 import { Icon } from "@/components/Icon";
 import { SecondaryButton } from "@/components/buttons/SecondaryButton";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 export const ArchivedCaseStudies = ({ caseStudies, categories }) => {
   const [archivedCaseStudies, setArchivedCaseStudies] = useState(
     caseStudies.filter((caseStudy) => !caseStudy.featured),
@@ -31,7 +33,7 @@ export const ArchivedCaseStudies = ({ caseStudies, categories }) => {
       <div className="mx-auto max-w-lg rounded-3xl bg-orange-300 shadow-xl">
         <Link href={caseStudyPath}>
           <div className="relative h-64 w-full rounded-t-3xl bg-cover bg-center">
-            <Image
+            <Skeleton
               src={caseStudy.image}
               alt={caseStudy.name}
               fill

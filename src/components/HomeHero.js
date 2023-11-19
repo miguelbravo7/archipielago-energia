@@ -3,7 +3,7 @@ import Image from "next/image";
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import { SecondaryButton } from "@/components/buttons/SecondaryButton";
 
-import heroImage from "/public/stock/hero-home.jpg";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export const HomeHero = () => {
   return (
@@ -42,7 +42,7 @@ export const HomeHero = () => {
       <div className="pb-20 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div className="sm:max-w-lg">
-            <p className="z-30 inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-orange-200 to-white px-6 py-2 text-sm font-medium tracking-wide text-stone-700">
+            <p className="z-30 inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-orange-400 to-orange-300 px-6 py-2 text-sm font-medium tracking-wide text-stone-700">
               Welcome
             </p>
             <div className="z-30 mx-auto mt-6 w-full max-w-lg text-center md:max-w-2xl lg:max-w-none lg:text-left">
@@ -53,9 +53,9 @@ export const HomeHero = () => {
                 </p>
               </h1>
               <p className="mt-6 text-xl text-stone-700">
-                Crator is your partner in digital innovation. We fuse strategic
-                thinking with standout design and development to deliver
-                uniquely tailored solutions.
+                Archipielago is your partner in digital innovation. We fuse
+                strategic thinking with standout design and development to
+                deliver uniquely tailored solutions.
               </p>
             </div>
 
@@ -87,7 +87,7 @@ export const HomeHero = () => {
                         /> */}
                       </div>
                       <div className="h-64 w-44 place-self-end overflow-hidden rounded-lg">
-                        <img
+                        <Skeleton
                           data-aos="fade-down"
                           data-aos-duration="1000"
                           data-aos-delay="400"
@@ -106,7 +106,7 @@ export const HomeHero = () => {
                         /> */}
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
-                        <img
+                        <Skeleton
                           data-aos="fade-down"
                           data-aos-duration="1000"
                           data-aos-delay="200"
@@ -128,7 +128,7 @@ export const HomeHero = () => {
                     </div>
                     <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
-                        <img
+                        <Skeleton
                           data-aos="fade-down"
                           data-aos-duration="1000"
                           data-aos-delay="0"
@@ -138,7 +138,7 @@ export const HomeHero = () => {
                         />
                       </div>
                       <div className="h-64 w-44 overflow-hidden rounded-lg">
-                        <img
+                        <Skeleton
                           data-aos="fade-down"
                           data-aos-duration="1000"
                           data-aos-delay="600"

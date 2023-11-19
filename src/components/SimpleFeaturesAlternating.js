@@ -1,6 +1,8 @@
 import Image from "next/image";
 import clsx from "clsx";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 import image1 from "/public/stock/features-alternating-simple-01.jpg";
 import image2 from "/public/stock/features-alternating-simple-02.jpg";
 import image3 from "/public/stock/features-alternating-simple-03.jpg";
@@ -77,7 +79,7 @@ export const SimpleFeaturesAlternating = () => {
                   : "md:rounded-l-3xl lg:rounded-r-3xl",
               )}
             >
-              <Image
+              <Skeleton
                 src={feature.image.src}
                 fill
                 alt={feature.image.alt}

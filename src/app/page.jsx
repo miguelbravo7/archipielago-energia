@@ -14,16 +14,19 @@ export default function HomePage() {
   return (
     <>
       <AOSInit />
+
       <HomeHero />
+
+      <div className="bg-white py-24 sm:py-32">
+        <LogoCloud />
+      </div>
+
       <ServicesHero />
-      {/*
-      <LogoCloud />
-      */}
 
       {/* Diagonal section separator */}
       <div className="relative h-16 w-full md:h-32 lg:h-48">
         <svg
-          className="absolute h-full w-full text-orange-200"
+          className="absolute h-full w-full text-red-100"
           preserveAspectRatio="none"
           viewBox="0 0 100 100"
           fill="currentcolor"
@@ -32,10 +35,12 @@ export default function HomePage() {
         </svg>
       </div>
 
-      <ServicesOverview />
+      <section className="bg-red-100 px-4 py-10 sm:px-6 md:py-12 lg:px-8">
+        <ServicesOverview />
+      </section>
 
       {/* Diagonal section separator */}
-      <div className="relative h-16 w-full bg-orange-200 md:h-32 lg:h-48">
+      <div className="relative h-16 w-full bg-red-100 md:h-32 lg:h-48">
         <svg
           className="absolute h-full w-full text-white"
           preserveAspectRatio="none"
@@ -86,7 +91,17 @@ export default function HomePage() {
 
       {/* <SocialProof /> */}
 
-      <FAQ />
+      <section>
+        <div
+          aria-hidden="true"
+          class="absolute m-auto grid h-max w-full grid-cols-2 -space-x-52 opacity-40"
+        >
+          <div class="from-primary h-56 bg-gradient-to-br to-rose-400 blur-[106px]"></div>
+          <div class="h-32 bg-gradient-to-r from-red-400 to-orange-300 blur-[106px]"></div>
+        </div>
+
+        <FAQ />
+      </section>
 
       <CallToAction />
     </>

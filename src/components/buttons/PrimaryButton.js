@@ -11,7 +11,7 @@ export function PrimaryButton({
     <Link
       href={href}
       className={clsx(
-        "flex w-auto items-center justify-center rounded-full bg-orange-100 px-8 py-3 font-semibold leading-snug text-stone-500 transition duration-250 ease-in-out hover:text-stone-700 focus:outline-none",
+        "flex w-auto items-center justify-center rounded-md bg-orange-400/80 px-8 py-3 font-semibold leading-snug text-stone-50 transition duration-250 ease-in-out hover:text-stone-700 focus:outline-none",
         className,
       )}
       {...props}
@@ -22,7 +22,7 @@ export function PrimaryButton({
     <button
       className={clsx(
         className,
-        "flex w-auto items-center justify-center rounded-full bg-orange-100 px-8 py-3 text-base font-semibold leading-snug text-stone-500 transition duration-250 ease-in-out hover:text-stone-700 focus:outline-none",
+        "flex w-auto items-center justify-center rounded-md bg-orange-400 px-8 py-3 text-base font-semibold leading-snug text-stone-500 transition duration-250 ease-in-out hover:text-stone-700 focus:outline-none",
       )}
       {...props}
     >

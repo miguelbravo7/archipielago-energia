@@ -3,6 +3,8 @@ import clsx from "clsx";
 
 import { Icon } from "@/components/Icon";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 import portraitImage from "/public/stock/what-we-do-image-01.jpg";
 import squareImage1 from "/public/stock/what-we-do-image-02.jpg";
 import squareImage2 from "/public/stock/what-we-do-image-03.jpg";
@@ -30,7 +32,7 @@ const services = [
 
 export const ServicesOverview = () => {
   return (
-    <section className="bg-orange-200 px-4 py-10 sm:px-6 md:py-12 lg:px-8">
+    <>
       {/* Section text */}
       <div className="mx-auto max-w-xl text-center md:max-w-2xl lg:max-w-screen-xl lg:text-left">
         <p className="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-orange-400 to-orange-300 px-6 py-2 text-sm font-medium tracking-wide text-stone-700">
@@ -68,10 +70,10 @@ export const ServicesOverview = () => {
               )}
             >
               <div className="mx-auto max-w-lg lg:mr-auto xl:mx-auto">
-                <div className="relative flex w-full rounded-3xl bg-orange-300 px-8 py-6 shadow-xl sm:px-10">
+                <div className="relative flex w-full rounded-3xl bg-white px-8 py-6 shadow-md shadow-orange-500/30 sm:px-10">
                   <div className="text-center sm:flex sm:text-left">
                     <div className="w-full sm:w-1/5">
-                      <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-r from-orange-200 to-white sm:mx-0">
+                      <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-r from-orange-300 to-orange-400 sm:mx-0">
                         <Icon
                           name={service.icon}
                           className="h-6 w-6 text-stone-700"
@@ -96,7 +98,7 @@ export const ServicesOverview = () => {
         <div className="flex max-w-screen-md items-center justify-center lg:max-w-full">
           <div className="grid h-full w-full grid-flow-col grid-rows-2 gap-4">
             <div className="relative row-span-2 rounded-3xl shadow-xl">
-              <Image
+              <Skeleton
                 src={portraitImage}
                 alt="Office work"
                 className="h-full w-full rounded-3xl object-cover object-right"
@@ -104,7 +106,7 @@ export const ServicesOverview = () => {
               />
             </div>
             <div className="relative rounded-3xl shadow-xl">
-              <Image
+              <Skeleton
                 src={squareImage1}
                 alt="More office work"
                 className="h-full w-full rounded-3xl object-cover object-center"
@@ -112,7 +114,7 @@ export const ServicesOverview = () => {
               />
             </div>
             <div className="relative rounded-3xl shadow-xl">
-              <Image
+              <Skeleton
                 src={squareImage2}
                 alt="Group brainstorming"
                 className="h-full w-full rounded-3xl object-cover object-center"
@@ -122,6 +124,6 @@ export const ServicesOverview = () => {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };

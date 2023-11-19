@@ -1,5 +1,6 @@
 import Link from "next/link";
 import clsx from "clsx";
+import { Skeleton } from "./ui/skeleton";
 
 const logos = [
   {
@@ -194,8 +195,49 @@ const logos = [
 
 export const LogoCloud = () => {
   return (
-    <section className="mx-auto max-w-screen-xl px-4 pb-10 pt-12 sm:px-6 md:pb-12 md:pt-16 lg:px-8">
-      {/* Section text */}
+    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
+        Trusted by the world’s most innovative teams
+      </h2>
+      <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+        <img
+          className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
+          alt="Transistor"
+          width={158}
+          height={48}
+        />
+        <img
+          className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
+          alt="Reform"
+          width={158}
+          height={48}
+        />
+        <img
+          className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+          src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
+          alt="Tuple"
+          width={158}
+          height={48}
+        />
+        <img
+          className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+          src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
+          alt="SavvyCal"
+          width={158}
+          height={48}
+        />
+        <img
+          className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+          src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
+          alt="Statamic"
+          width={158}
+          height={48}
+        />
+      </div>
+      {/* <section className="mx-auto max-w-screen-xl px-4 pb-10 pt-12 sm:px-6 md:pb-12 md:pt-16 lg:px-8">
+      // Section text
       <div className="mx-auto w-full max-w-xl text-center md:max-w-2xl lg:max-w-3xl">
         <p className="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-orange-400 to-orange-300 px-6 py-2 text-sm font-medium tracking-wide text-stone-700">
           Our partners
@@ -209,7 +251,7 @@ export const LogoCloud = () => {
         </p>
       </div>
 
-      {/* Logos */}
+      // Logos
       <div className="mx-auto mt-12 max-w-screen-lg lg:mt-14">
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6">
           {logos.map((item, index) => (
@@ -225,6 +267,7 @@ export const LogoCloud = () => {
           ))}
         </div>
       </div>
-    </section>
+    </section> */}
+    </div>
   );
 };

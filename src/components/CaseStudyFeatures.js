@@ -1,6 +1,8 @@
 import Image from "next/image";
 import clsx from "clsx";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 export const CaseStudyFeatures = ({ data }) => {
   return (
     <section className="px-4 py-12 sm:px-6 sm:pb-24 md:pt-16 lg:px-8">
@@ -68,7 +70,7 @@ export const CaseStudyFeatures = ({ data }) => {
               </div>
               <div className="aspect-h-2 aspect-w-3 relative w-full">
                 {/* Feature image */}
-                <Image
+                <Skeleton
                   src={feature.image.src}
                   alt={feature.image.alt}
                   fill

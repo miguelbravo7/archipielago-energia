@@ -6,6 +6,8 @@ import { Icon } from "@/components/Icon";
 import valuesImage from "/public/stock/values.jpg";
 import handbookImage from "/public/stock/handbook.jpg";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 const features = [
   {
     tagline: "Our vision",
@@ -104,7 +106,7 @@ export const FeaturesAlternatingWithIcons = () => {
             {/* Feature image */}
             <div className="col-span-1 mt-10 flex items-center lg:order-1 lg:mt-0">
               <div className="aspect-h-3 aspect-w-2 relative w-full rounded-3xl text-center shadow-xl">
-                <Image
+                <Skeleton
                   className="absolute inset-0 h-full w-full rounded-3xl object-cover object-center align-middle"
                   src={feature.image.src}
                   alt={feature.image.alt}

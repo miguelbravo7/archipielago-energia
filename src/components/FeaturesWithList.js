@@ -3,6 +3,8 @@ import clsx from "clsx";
 
 import { Icon } from "@/components/Icon";
 
+import { Skeleton } from "@/components/ui/skeleton";
+
 import featureImage1 from "/public/stock/features-alternating-with-list-01.jpg";
 import featureImage2 from "/public/stock/features-alternating-with-list-02.jpg";
 
@@ -109,7 +111,7 @@ export const FeaturesWithList = () => {
                 </svg>
                 <div className="absolute inset-y-0 left-1/2 z-10 h-full w-1/2 rounded-r-3xl bg-white" />
               </div>
-              <Image
+              <Skeleton
                 src={feature.image.src}
                 alt={feature.image.alt}
                 className="z-30 h-full w-auto rounded-3xl object-cover shadow-xl"
