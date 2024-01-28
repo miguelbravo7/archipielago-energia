@@ -13,10 +13,10 @@ export const ServicesHero = () => {
         {/* Hero header */}
         <div>
           <p className="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-orange-400 to-orange-300 px-6 py-2 text-sm font-medium tracking-wide text-stone-700">
-            Our services
+            Quiénes somos?
           </p>
           <h1 className="mt-6 text-left text-4xl font-extrabold text-stone-700 sm:text-5xl md:text-6xl">
-            We Create meaningful digital solutions that level up your business
+            Somos una empresa Tinerfeña fundada por profesionales del sector
           </h1>
         </div>
         {/* Hero content */}
@@ -24,16 +24,17 @@ export const ServicesHero = () => {
           <div className="z-10 grid gap-x-8 lg:absolute lg:grid-cols-2">
             <div>
               <p className="max-w-lg text-xl text-stone-700 sm:max-w-3xl lg:mx-auto">
-                Elevating businesses with expertly designed and executed digital
-                strategies. Archipielago is here to help you conquer the online
-                space one pexel at a time.
+                Cada instalación solar es única y por ello debe ser diseñada y
+                dimensionada a la necesidad de cada usuario. En Archipiélago
+                Energía ponemos a tu disposición soluciones que cumplan todas
+                tus espectativas. Infórmate, compara y decide.
               </p>
               <div className="mt-8 sm:flex sm:justify-start">
                 <PrimaryButton
                   className="h-14 hover:bg-orange-300"
                   href="/contact"
                 >
-                  Let's get started
+                  Comencemos!
                 </PrimaryButton>
               </div>
             </div>

@@ -11,21 +11,31 @@ import squareImage2 from "/public/stock/what-we-do-image-03.jpg";
 
 const services = [
   {
-    label: "Web Design",
+    label: "Proyectos personalizados",
     description:
-      "We craft visually stunning, unforgettable experiences with responsive design at the forefront.",
+      "Cada cliente necesita una instalación a medida de sus necesidades.",
     icon: "artboard",
   },
   {
-    label: "Web Development",
+    label: "Mantenimiento periódico",
     description:
-      "We excell at converting eye-catching designs into high-functioning, user-friendly web applications.",
+      "Ofrecemos un servicio de mantenimiento para tu instalación fotovoltaica.",
     icon: "code",
   },
   {
-    label: "Maintenance & Optimization",
+    label: "Tramitación de seguro",
+    description: "Nos encargamos de la tramitación de tu seguro.",
+    icon: "tool",
+  },
+  {
+    label: "Financiación",
+    description: "Buscamos financiación en base a tus necesidades.",
+    icon: "tool",
+  },
+  {
+    label: "Tramitación de subenciones",
     description:
-      "We ensure your site remains an effective, optimized tool for your business needs, goals and growth.",
+      "Gestionamos las diferentes subenciones disponibles en cada momento.",
     icon: "tool",
   },
 ];
@@ -36,18 +46,18 @@ export const ServicesOverview = () => {
       {/* Section text */}
       <div className="mx-auto max-w-xl text-center md:max-w-2xl lg:max-w-screen-xl lg:text-left">
         <p className="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-orange-400 to-orange-300 px-6 py-2 text-sm font-medium tracking-wide text-stone-700">
-          What we do
+          Qué hacemos?
         </p>
         <div className="mt-6 grid w-full gap-6 lg:grid-cols-5">
           <div className="lg:col-span-3">
             <h2 className="text-3xl font-extrabold text-stone-700 sm:text-4xl md:text-5xl">
-              We create digital products that help you get ahead
+              Te ayudamos a crear, mejorar o ampliar tu instalación solar
             </h2>
           </div>
           <div className="lg:col-span-2">
             <p className="text-xl text-stone-700">
-              From fresh ideas to fully-realized designs, we cover every aspect
-              of your digital presence.
+              Te ofrecemos diversas soluciones técnicas que harán de tu
+              instalación fotovoltaica una inversión rentable y duradera.
             </p>
           </div>
         </div>
@@ -57,16 +67,16 @@ export const ServicesOverview = () => {
         {/* Features list */}
         <div>
           {/* Item */}
-          {services.slice(0, 3).map((service, index) => (
+          {services.map((service, index) => (
             <div
               data-aos="fade-right"
               data-aos-duration="500"
               key={`service-${index}`}
               className={clsx(
                 "w-full",
-                index === 1 &&
+                index % 2 == 1 &&
                   "mt-8 lg:mt-5 xl:mt-8 xl:pr-18 2xl:mt-10 2xl:pr-28",
-                index === 2 && "mt-8 lg:mt-5 xl:mt-8 2xl:mt-10",
+                index % 2 == 0 && "mt-8 lg:mt-5 xl:mt-8 2xl:mt-10",
               )}
             >
               <div className="mx-auto max-w-lg lg:mr-auto xl:mx-auto">

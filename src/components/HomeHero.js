@@ -43,29 +43,28 @@ export const HomeHero = () => {
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div className="sm:max-w-lg">
             <p className="z-30 inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-orange-400 to-orange-300 px-6 py-2 text-sm font-medium tracking-wide text-stone-700">
-              Welcome
+              Bienvenido/a
             </p>
             <div className="z-30 mx-auto mt-6 w-full max-w-lg text-center md:max-w-2xl lg:max-w-none lg:text-left">
               <h1 className="text-4xl font-extrabold text-stone-700 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-                Let’s make your product a{" "}
-                <p className="bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">
-                  success
+                Comienza a generar tu propia{" "}
+                <p className="h-16 bg-gradient-to-r from-amber-500 to-pink-500 bg-clip-text text-transparent">
+                  energía
                 </p>
               </h1>
               <p className="mt-6 text-xl text-stone-700">
-                Archipielago is your partner in digital innovation. We fuse
-                strategic thinking with standout design and development to
-                deliver uniquely tailored solutions.
+                Sé autosuficiente de manera ecológica y sostenible. Utiliza tu
+                energía para reducir la factura de luz hasta 0€.
               </p>
             </div>
 
             <div className="z-30 mt-10 sm:flex sm:justify-center lg:justify-start">
-              <PrimaryButton href="/contact">Let's get started</PrimaryButton>
+              <PrimaryButton href="/contact">Comencemos</PrimaryButton>
               <SecondaryButton
                 className="ml-0 mt-5 sm:ml-4 sm:mt-0"
                 href="/services"
               >
-                Learn more
+                Saber más
               </SecondaryButton>
             </div>
           </div>
