@@ -54,8 +54,8 @@ export default function HomePage() {
       <section className="bg-white pb-12 pt-10 md:pb-16 md:pt-12">
         {/*
         <Process />
-      */}
         <ServiceList />
+      */}
       </section>
 
       {/* Featured work wrapper */}
@@ -94,10 +94,10 @@ export default function HomePage() {
       <section>
         <div
           aria-hidden="true"
-          class="absolute m-auto grid h-max w-full grid-cols-2 -space-x-52 opacity-40"
+          className="absolute m-auto grid h-max w-full grid-cols-2 -space-x-52 opacity-40"
         >
-          <div class="from-primary h-56 bg-gradient-to-br to-rose-400 blur-[106px]"></div>
-          <div class="h-32 bg-gradient-to-r from-red-400 to-orange-300 blur-[106px]"></div>
+          <div className="from-primary h-56 bg-gradient-to-br to-rose-400 blur-[106px]"></div>
+          <div className="h-32 bg-gradient-to-r from-red-400 to-orange-300 blur-[106px]"></div>
         </div>
 
         <FAQ />

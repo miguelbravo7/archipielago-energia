@@ -11,11 +11,12 @@ import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 const navbar = {
   navigation: [
     { label: "Home", href: "/" },
-    { label: "Services", href: "/services" },
+    //{ label: "Services", href: "/services" },
     { label: "Calculator", href: "/calculator" },
-    { label: "About", href: "/about" },
+    //{ label: "About", href: "/about" },
     { label: "Work", href: "/work" },
-    { label: "Case study", href: "/work/nedia" },
+    //{ label: "Case study", href: "/work/nedia" },
+    { label: "News", href: "#" },
   ],
   action: {
     label: "Let's talk",
