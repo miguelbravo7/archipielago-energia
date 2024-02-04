@@ -45,7 +45,7 @@ const formSchema = z.object({
   }),
 });
 
-export default function ComplexCalculator({ setIsLoading }) {
+export default function ComplexCalculator({ setIsLoading, setPriceEstimate }) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -70,6 +70,7 @@ export default function ComplexCalculator({ setIsLoading }) {
       const data = await response.json();
       // ...
       console.log(data);
+      setPriceEstimate(data);
     } catch (error) {
       // Handle error if necessary
       console.error(error);

@@ -39,5 +39,7 @@ export async function POST(request: NextRequest) {
   // labor
   let laborCost = materialCost / 2;
 
-  return NextResponse.json({ price: materialCost + laborCost + 150 });
+  return NextResponse.json({
+    price: Math.round(materialCost + laborCost + 150),
+  });
 }

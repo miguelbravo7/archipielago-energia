@@ -33,7 +33,7 @@ const formSchema = z.object({
   battery: z.boolean().default(true),
 });
 
-export default function SimpleCalculator({ setIsLoading }) {
+export default function SimpleCalculator({ setIsLoading, setPriceEstimate }) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -55,6 +55,7 @@ export default function SimpleCalculator({ setIsLoading }) {
       const data = await response.json();
       // ...
       console.log(data);
+      setPriceEstimate(data);
     } catch (error) {
       // Handle error if necessary
       console.error(error);

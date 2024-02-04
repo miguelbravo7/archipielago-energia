@@ -79,5 +79,7 @@ export async function POST(request: NextRequest) {
     protectorCost = 300;
   }
 
-  return NextResponse.json({ price: materialCost + laborCost + protectorCost });
+  return NextResponse.json({
+    price: Math.round(materialCost + laborCost + protectorCost),
+  });
 }
