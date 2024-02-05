@@ -1,0 +1,11 @@
+{ 
+  "navbar": {
+    "home": "Inicio",
+    "calculator": "Calculadora",
+    "work": "Trabajo",
+    "news": "Noticias"
+  },
+  "home": { 
+    "text": "prueba"
+  }
+}

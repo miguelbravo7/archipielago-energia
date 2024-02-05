@@ -26,7 +26,7 @@ export default function HomePage() {
       {/* Diagonal section separator */}
       <div className="relative h-16 w-full md:h-32 lg:h-48">
         <svg
-          className="absolute h-full w-full text-red-100"
+          className="absolute h-full w-full text-red-50"
           preserveAspectRatio="none"
           viewBox="0 0 100 100"
           fill="currentcolor"
@@ -35,12 +35,12 @@ export default function HomePage() {
         </svg>
       </div>
 
-      <section className="bg-red-100 px-4 py-10 sm:px-6 md:py-12 lg:px-8">
+      <section className="bg-red-50 px-4 py-10 sm:px-6 md:py-12 lg:px-8">
         <ServicesOverview />
       </section>
 
       {/* Diagonal section separator */}
-      <div className="relative h-16 w-full bg-red-100 md:h-32 lg:h-48">
+      <div className="relative h-16 w-full bg-red-50 md:h-32 lg:h-48">
         <svg
           className="absolute h-full w-full text-white"
           preserveAspectRatio="none"

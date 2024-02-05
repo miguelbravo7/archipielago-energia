@@ -1,0 +1,11 @@
+{
+  "navbar": {
+    "home": "Home",
+    "calculator": "Calculator",
+    "work": "Work",
+    "news": "News"
+  },
+  "home": {
+    "text": "prueba"
+  }
+}

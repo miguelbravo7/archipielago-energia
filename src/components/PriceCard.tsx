@@ -22,7 +22,7 @@ export default function Component({ priceEstimate }) {
       </CardHeader>
       <CardContent className="flex flex-col items-center space-y-4">
         <span className="text-5xl font-bold">{priceEstimate}€</span>
-        <ul className="w-full space-y-2 text-sm text-gray-500 dark:text-gray-400">
+        <ul className="w-full space-y-2 text-sm text-gray-500 ">
           <li className="flex justify-between">
             <span>Unlimited access to all features</span>
             <span className="font-bold"></span>
@@ -48,7 +48,7 @@ export default function Component({ priceEstimate }) {
             <span className="font-bold"></span>
           </li>
         </ul>
-        <p className="mt-2 w-full text-center text-xs text-red-500 dark:text-red-400">
+        <p className="mt-2 w-full text-center text-xs text-red-500 ">
           *These are estimated values
         </p>
       </CardContent>
