@@ -28,7 +28,7 @@ export default function LocaleSwitcher() {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
-            className="w-full justify-start text-left font-normal "
+            className="h-full w-full justify-start text-left font-normal "
             variant="outline"
           >
             <GlobeIcon className="mr-1 h-4 w-4 " /> {pathName.split("/")[1]}

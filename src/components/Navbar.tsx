@@ -39,7 +39,7 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent
             side="left"
-            className="to-whit bg-gradient-to-tr from-orange-200"
+            className="to-whit bg-gradient-to-br from-orange-100"
           >
             <Link className="mb-6 flex items-center" href="#">
               <Logo />
@@ -57,6 +57,7 @@ export default function Navbar() {
                   {t(link.label)}
                 </Link>
               ))}
+              <LocaleSwitcher />
             </div>
           </SheetContent>
         </Sheet>
@@ -88,7 +89,7 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
-          <div className="hidden md:flex">
+          <div className="hidden space-x-4 md:flex ">
             <LocaleSwitcher />
             <PrimaryButton
               href={navbar.action.href}
