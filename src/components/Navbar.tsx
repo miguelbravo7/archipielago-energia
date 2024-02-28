@@ -46,30 +46,17 @@ export default function Navbar() {
               <span className="sr-only">Acme Inc</span>
             </Link>
             <div className="grid gap-2 py-6">
-              <Link
-                className="flex w-full items-center py-2 text-lg font-semibold hover:bg-orange-200"
-                href="#"
-              >
-                Home
-              </Link>
-              <Link
-                className="flex w-full items-center py-2 text-lg font-semibold hover:bg-orange-200"
-                href="#"
-              >
-                About
-              </Link>
-              <Link
-                className="flex w-full items-center py-2 text-lg font-semibold hover:bg-gray-200"
-                href="#"
-              >
-                Services
-              </Link>
-              <Link
-                className="flex w-full items-center py-2 text-lg font-semibold hover:bg-gray-200"
-                href="#"
-              >
-                Contact
-              </Link>
+              {navbar.navigation.map((link, index) => (
+                <Link
+                  href={link.href}
+                  key={`desktop-nav-link-${index}`}
+                  className={clsx(
+                    "flex w-full items-center py-2 text-lg font-semibold hover:bg-orange-200",
+                  )}
+                >
+                  {t(link.label)}
+                </Link>
+              ))}
             </div>
           </SheetContent>
         </Sheet>
