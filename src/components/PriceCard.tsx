@@ -11,8 +11,18 @@ import {
   Card,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
+import { forwardRef } from "react";
 
-export default function Component({ priceEstimate }) {
+interface PriceCardProps {
+  isLoading: boolean;
+  priceEstimate: number;
+}
+
+export default forwardRef<
+  HTMLButtonElement,
+  React.PropsWithChildren<PriceCardProps>
+>(function Component({ isLoading, priceEstimate }, ref) {
   return (
     <Card className="w-full max-w-md bg-transparent">
       <CardHeader>
@@ -21,7 +31,13 @@ export default function Component({ priceEstimate }) {
         </CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col items-center space-y-4">
-        <span className="text-5xl font-bold">{priceEstimate}€</span>
+        {isLoading ? (
+          <span className="flex h-[48px] w-1/2 text-5xl font-bold">
+            <Skeleton className="mt-[10px] h-1/2 w-full rounded-full" />€
+          </span>
+        ) : (
+          <span className="text-5xl font-bold">{priceEstimate}€</span>
+        )}
         <ul className="w-full space-y-2 text-sm text-gray-500 ">
           <li className="flex justify-between">
             <span>Unlimited access to all features</span>
@@ -53,8 +69,10 @@ export default function Component({ priceEstimate }) {
         </p>
       </CardContent>
       <CardFooter className="flex justify-center">
-        <Button size="lg">Contact</Button>
+        <Button ref={ref} size="lg">
+          Contact
+        </Button>
       </CardFooter>
     </Card>
   );
-}
+});

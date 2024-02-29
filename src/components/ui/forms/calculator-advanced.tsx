@@ -250,7 +250,9 @@ export default function ComplexCalculator({ setIsLoading, setPriceEstimate }) {
                 </FormItem>
               )}
             />
-            <Button type="submit">Submit</Button>
+            <div className="flex justify-center">
+              <Button type="submit">Submit</Button>
+            </div>
           </form>
         </Form>
       </CardContent>

@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
@@ -43,7 +43,7 @@ export default function SimpleCalculator({ setIsLoading, setPriceEstimate }) {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsLoading(true); // Set loading to true when the request starts
+    await setIsLoading(true); // Set loading to true when the request starts
 
     try {
       const response = await fetch("/api/calculator-simple", {
@@ -65,7 +65,7 @@ export default function SimpleCalculator({ setIsLoading, setPriceEstimate }) {
   }
 
   return (
-    <Card>
+    <Card className="border-transparent shadow-none">
       <CardHeader>
         <CardTitle>Simple</CardTitle>
         <CardDescription>Basic estimation of price.</CardDescription>
@@ -114,7 +114,9 @@ export default function SimpleCalculator({ setIsLoading, setPriceEstimate }) {
                 </FormItem>
               )}
             />
-            <Button type="submit">Submit</Button>
+            <div className="flex justify-center">
+              <Button type="submit">Submit</Button>
+            </div>
           </form>
         </Form>
       </CardContent>
