@@ -22,9 +22,9 @@ export default function CaseStudyPage({ params: { slug } }) {
     <>
       {caseStudy?.hero && <CaseStudyHero data={caseStudy} />}
       {caseStudy?.about && <AboutCaseStudy data={caseStudy.about} />}
-      {caseStudy?.statsSection && (
+      {/* {caseStudy?.statsSection && (
         <CaseStudyStats data={caseStudy.statsSection} />
-      )}
+      )}*/}
       {caseStudy?.featuresSection && (
         <CaseStudyFeatures data={caseStudy.featuresSection} />
       )}

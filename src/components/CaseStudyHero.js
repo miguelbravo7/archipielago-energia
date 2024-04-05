@@ -4,6 +4,7 @@ import { Icon } from "@/components/Icon";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export const CaseStudyHero = ({ data }) => {
+  console.log(data.hero.keyPoints);
   return (
     <section className="px-4 py-12 sm:px-6 md:py-16 lg:px-8">
       <div className="mx-auto max-w-screen-xl">
@@ -17,7 +18,7 @@ export const CaseStudyHero = ({ data }) => {
           </h1>
         </div>
         {/* Features container */}
-        <div className="mx-auto mt-12 grid w-full max-w-lg gap-10 lg:mt-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-12">
+        <div className="mx-auto mt-12 grid w-full max-w-lg gap-10 lg:mt-16 lg:max-w-none lg:grid-cols-2 lg:gap-x-12">
           {data.hero.keyPoints.slice(0, 3).map((item, index) => (
             <div key={`case-study-key-point-${index}`} className="w-full">
               <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-orange-400 to-orange-300 shadow-xl">
@@ -26,9 +27,23 @@ export const CaseStudyHero = ({ data }) => {
               <h3 className="mt-5 text-center text-2xl font-semibold text-stone-700">
                 {item.label}
               </h3>
-              <p className="mt-2 text-center text-lg leading-relaxed text-stone-700">
-                {item.text}
-              </p>
+              {item.text.map ? (
+                item.text.map((item, index) => (
+                  <p
+                    key={`case-study-key-point-text-${index}`}
+                    className="mt-2 text-center text-lg leading-relaxed text-stone-700"
+                  >
+                    {item}
+                  </p>
+                ))
+              ) : (
+                <p
+                  key={`case-study-key-point-text-${index}`}
+                  className="mt-2 text-center text-lg leading-relaxed text-stone-700"
+                >
+                  {item.text}
+                </p>
+              )}
             </div>
           ))}
         </div>
