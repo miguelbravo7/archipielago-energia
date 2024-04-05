@@ -1,7 +1,11 @@
 ---
 name: Plomo abierto
 shortDescription: Bajo coste de compra, requieren de mantenimiento periódico y gran vida útil.
-category: Baterías, Baterías de plomo, Aislada, Red con baterías
+category:
+  - Baterías
+  - Baterías de plomo
+  - Aislada
+  - Red con baterías
 image: "/stock/work/featured-work-image-01.jpg"
 featured: true
 date: Nov. 2023

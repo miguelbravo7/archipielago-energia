@@ -1,13 +1,13 @@
 ---
 name: Inversores
 shortDescription: Transforman la energía generada en energía útil.
-category: Inversores, Aislada, Red con baterías, Red sin baterías
+category:
+  - Inversores
+  - Aislada
+  - Red con baterías
+  - Red sin baterías
 image: "/stock/work/featured-work-image-01.jpg"
-featured: true
 date: Nov. 2023
-stack:
-  - tech: html
-  - tech: tailwind
 hero:
   tagline: Saber más
   headline: Inversores
@@ -62,6 +62,6 @@ featuresSection:
         src: "/stock/work/work-image-03.jpg"
         alt: "carga/descarga"
   about:
-    tagline:  Conclusión
+    tagline: Conclusión
     text: Los inversores son de los elementos más complejos en una instalación fotovoltaica para los profesionales del sector, ya que estos dependen de algunas variantes como el tipo de red, el tipo de instalación, cantidad de placas, etc... Pero para el cliente es sencillo, el que se adapte a su exigencia. Quiere poner baterías ahora o más adelante? Precisa de uno monofásico o trifásico? Cuantas placas va a instalar? Tiene regulador de carga incorporado? Estas son las preguntas principales que hacerse al elegir nuestro inversor idóneo. Tenemos que ser conscientes de que cada instalación fotovoltaica debe ser única y creada a medida de la propiedad a abastecer.
 ---

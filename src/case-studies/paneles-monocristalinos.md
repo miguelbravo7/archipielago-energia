@@ -1,12 +1,10 @@
 ---
 name: Paneles Monocristalinos
 shortDescription: Mayor producción pico, sensibles a altas temperaturas.
-category: Paneles solares
+category:
+  - Paneles solares
 image: "/stock/work/work-image-04.jpg"
 date: Oct. 2023
-stack:
-  - tech: html
-  - tech: tailwind
 hero:
   tagline: Saber más
   headline: Paneles solares Monocristalinos

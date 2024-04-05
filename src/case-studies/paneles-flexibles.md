@@ -1,12 +1,10 @@
 ---
 name: Paneles Flexibles
 shortDescription: Adaptables a la superficie, precio elevado.
-category: Paneles solares
+category:
+  - Paneles solares
 image: "/stock/work/work-image-06.jpg"
 date: Oct. 2023
-stack:
-  - tech: html
-  - tech: tailwind
 hero:
   tagline: Saber más
   headline: Panles solares Bifaciales

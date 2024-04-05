@@ -1,12 +1,10 @@
 ---
 name: Paneles Policristalinos
 shortDescription: Menor producción pico, no se ven afectados por la temperatura.
-category: Paneles solares
+category:
+  - Paneles solares
 image: "/stock/work/work-image-08.jpg"
 date: Oct. 2023
-stack:
-  - tech: html
-  - tech: tailwind
 hero:
   tagline: Saber más
   headline: Paneles solares Policristalinos

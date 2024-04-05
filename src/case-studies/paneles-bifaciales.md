@@ -1,12 +1,10 @@
 ---
 name: Paneles Bifaciales
 shortDescription: La mayor producción en condiciones óptimas, precio elevado.
-category: Paneles solares
+category:
+  - Paneles solares
 image: "/stock/work/work-image-03.jpg"
 date: Oct. 2023
-stack:
-  - tech: html
-  - tech: tailwind
 hero:
   tagline: Saber más
   headline: Panles solares Bifaciales

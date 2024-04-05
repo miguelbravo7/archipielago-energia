@@ -1,13 +1,13 @@
 ---
 name: Plomo estacionarias
 shortDescription: coste de compra intermedio, no requieren de mantenimiento periódico y la mayor vida útil de las baterías de plomo.
-category: Baterías, Baterías de plomo, Aislada, Red con baterías
+category:
+  - Baterías
+  - Baterías de plomo
+  - Aislada
+  - Red con baterías
 image: "/stock/work/featured-work-image-01.jpg"
-featured: true
 date: Nov. 2023
-stack:
-  - tech: html
-  - tech: tailwind
 hero:
   tagline: Saber más
   headline: Baterías de plomo estacionarias

@@ -4,7 +4,6 @@ import { Icon } from "@/components/Icon";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export const CaseStudyHero = ({ data }) => {
-  console.log(data.hero.keyPoints);
   return (
     <section className="px-4 py-12 sm:px-6 md:py-16 lg:px-8">
       <div className="mx-auto max-w-screen-xl">
@@ -37,11 +36,8 @@ export const CaseStudyHero = ({ data }) => {
                   </p>
                 ))
               ) : (
-                <p
-                  key={`case-study-key-point-text-${index}`}
-                  className="mt-2 text-center text-lg leading-relaxed text-stone-700"
-                >
-                  {item.text}
+                <p className="mt-2 text-center text-lg leading-relaxed text-stone-700">
+                  {item}
                 </p>
               )}
             </div>

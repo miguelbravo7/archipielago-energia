@@ -1,13 +1,12 @@
 ---
 name: Plomo virtual
 shortDescription: Ningún coste de compra directo, 0 mantenimiento y la vida útil depende completamente de la empresa suministradora.
-category: Baterías, Baterías de plomo, Aislada, Red con baterías
+category:
+  - Baterías de plomo
+  - Aislada
+  - Red con baterías
 image: "/stock/work/featured-work-image-01.jpg"
-featured: true
 date: Nov. 2023
-stack:
-  - tech: html
-  - tech: tailwind
 hero:
   tagline: Saber más
   headline: Baterías virtuales

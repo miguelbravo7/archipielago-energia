@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 
 import { Icon } from "@/components/Icon";
 import { SecondaryButton } from "@/components/buttons/SecondaryButton";
+import { Badge } from "@/components/ui/badge";
 
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -15,13 +16,17 @@ export const ArchivedCaseStudies = ({ caseStudies, categories }) => {
     caseStudies.filter((caseStudy) => !caseStudy.featured),
   );
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const categorieSet = new Set();
+  for (let index = 0; index < categories.length; index++) {
+    categories[index].forEach((item) => categorieSet.add(item));
+  }
 
   useEffect(() => {
     setArchivedCaseStudies(
       selectedCategory === "all"
         ? caseStudies
-        : caseStudies.filter(
-            (caseStudy) => caseStudy.category === selectedCategory,
+        : caseStudies.filter((caseStudy) =>
+            caseStudy.category.includes(selectedCategory),
           ),
     );
   }, [selectedCategory, caseStudies]);
@@ -40,13 +45,33 @@ export const ArchivedCaseStudies = ({ caseStudies, categories }) => {
               className="h-full w-full rounded-t-3xl object-cover object-center"
               sizes="(min-width: 1280px) 28.5rem, (min-width: 1024px) 37.5vw, (min-width: 640px) 32rem, calc(100vw - 2rem)"
             />
-            <p className="ml-6 mt-4 inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-orange-300 to-orange-200 px-6 py-2 text-xs font-medium tracking-wide text-stone-700 lg:ml-4 xl:ml-6">
-              {caseStudy.category}
-            </p>
           </div>
         </Link>
+        <div className="items-center px-2 py-2 md:flex">
+          {caseStudy.category.map ? (
+            caseStudy.category.map((item, index) => (
+              <Badge
+                key={`case-study-key-point-text-${index}`}
+                color="orange"
+                variant="outline"
+                className="mx-1 w-max bg-gradient-to-r from-orange-300 to-orange-200 text-stone-700"
+              >
+                {item}
+              </Badge>
+            ))
+          ) : (
+            <Badge
+              key={`case-study-key-point-text`}
+              color="orange"
+              variant="outline"
+              className="bg-gradient-to-r from-orange-300 to-orange-200 text-stone-700 "
+            >
+              {caseStudy.category}
+            </Badge>
+          )}
+        </div>
 
-        <div className="w-full p-6 lg:p-4 xl:p-6">
+        <div className="w-full px-6 pb-6 pt-1 lg:p-4 xl:p-6">
           <div className="flex w-full flex-wrap">
             <div className="flex w-1/2 items-center justify-start">
               <Icon name="calendar" className="h-5 w-5 text-stone-600" />
@@ -54,15 +79,6 @@ export const ArchivedCaseStudies = ({ caseStudies, categories }) => {
               <div className="ml-2 text-base font-medium leading-6 text-stone-600">
                 {caseStudy.date}
               </div>
-            </div>
-            <div className="flex w-1/2 justify-end space-x-1">
-              {caseStudy.stack.map((tech, j) => (
-                <Icon
-                  name={tech.tech}
-                  className="h-6 w-6 text-stone-600"
-                  key={`caseStudy-${caseStudy.name}-tech-stack-${j}`}
-                />
-              ))}
             </div>
           </div>
           <Link href={caseStudyPath}>
@@ -108,9 +124,9 @@ export const ArchivedCaseStudies = ({ caseStudies, categories }) => {
             </div>
 
             {/* Filter */}
-            {categories.map((category, index) => {
+            {[...categorieSet].map((category) => {
               return (
-                <div key={`category-${index}`}>
+                <div key={`category-${category}`}>
                   <button
                     className={clsx(
                       "inline-flex items-center justify-center rounded-r-full rounded-tl-full px-6 py-2 text-sm font-bold tracking-wide text-stone-700 md:text-base",

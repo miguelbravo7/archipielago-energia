@@ -1,13 +1,13 @@
 ---
 name: Litio
 shortDescription: Muy alto coste de compra, no requieren de mantenimiento periódico y la mayor vida útil.
-category: Baterías, Aislada, Red con baterías
+category:
+  - Baterías
+  - Aislada
+  - Red con baterías
 image: "/stock/work/featured-work-image-01.jpg"
 featured: true
 date: Nov. 2023
-stack:
-  - tech: html
-  - tech: tailwind
 hero:
   tagline: Saber más
   headline: Baterías de litio

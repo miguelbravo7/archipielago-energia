@@ -1,13 +1,13 @@
 ---
 name: Plomo AGM
 shortDescription: Bajo coste de compra, no requieren de mantenimiento periódico y muy baja vida útil.
-category: Baterías, Baterías de plomo, Aislada, Red con baterías
+category:
+  - Baterías
+  - Baterías de plomo
+  - Aislada
+  - Red con baterías
 image: "/stock/work/featured-work-image-01.jpg"
-featured: true
 date: Nov. 2023
-stack:
-  - tech: html
-  - tech: tailwind
 hero:
   tagline: Saber más
   headline: Baterías de plomo AGM
