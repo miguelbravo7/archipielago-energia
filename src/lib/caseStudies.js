@@ -3,30 +3,36 @@ import path from "path";
 import matter from "gray-matter";
 
 export function getCaseStudy(slug) {
-  const markdownWithMeta = fs.readFileSync(
-    path.join("src/case-studies", slug + ".md"),
-    "utf-8",
-  );
+  if (!getCaseStudy[slug]) {
+    const markdownWithMeta = fs.readFileSync(
+      path.join(process.cwd(), "src/case-studies", slug + ".md"),
+      "utf-8",
+    );
 
-  const { data } = matter(markdownWithMeta);
+    const { data } = matter(markdownWithMeta);
+    getCaseStudy[slug] = data;
+  }
 
-  return data;
+  return getCaseStudy[slug];
 }
 
 export function getAllCaseStudies() {
-  const files = fs.readdirSync(path.join("src/case-studies"));
+  if (!getAllCaseStudies.response) {
+    const files = fs.readdirSync(path.join(process.cwd(), "src/case-studies"));
 
-  const caseStudyData = files.map((filename) => {
-    const fileContents = fs.readFileSync(
-      path.join("src/case-studies", filename),
-      "utf8",
-    );
+    getAllCaseStudies.response = files.map((filename) => {
+      const fileContents = fs.readFileSync(
+        path.join(process.cwd(), "src/case-studies", filename),
+        "utf8",
+      );
 
-    const { data } = matter(fileContents);
-    return { ...data, slug: filename.replace(".md", "") };
-  });
+      const { data } = matter(fileContents);
 
-  return caseStudyData;
+      return { ...data, slug: filename.replace(".md", "") };
+    });
+  }
+
+  return getAllCaseStudies.response;
 }
 
 export function getCaseStudyCategories() {
