@@ -10,16 +10,19 @@ import { SecondaryButton } from "@/components/buttons/SecondaryButton";
 import { Badge } from "@/components/ui/badge";
 
 import { Skeleton } from "@/components/ui/skeleton";
+import { BlogEntry, BlogEntryPreview } from "@/lib/caseStudies";
 
-export const ArchivedCaseStudies = ({ caseStudies, categories }) => {
+export const ArchivedCaseStudies = ({
+  caseStudies,
+  categories,
+}: {
+  caseStudies: BlogEntryPreview[];
+  categories: string[];
+}) => {
   const [archivedCaseStudies, setArchivedCaseStudies] = useState(
     caseStudies.filter((caseStudy) => !caseStudy.featured),
   );
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const categorieSet = new Set();
-  for (let index = 0; index < categories.length; index++) {
-    categories[index].forEach((item) => categorieSet.add(item));
-  }
 
   useEffect(() => {
     setArchivedCaseStudies(
@@ -31,20 +34,20 @@ export const ArchivedCaseStudies = ({ caseStudies, categories }) => {
     );
   }, [selectedCategory, caseStudies]);
 
-  function CaseStudy({ caseStudy }) {
+  function CaseStudy({ caseStudy }: { caseStudy: BlogEntryPreview }) {
     const caseStudyPath = `/work/${caseStudy.slug}`;
 
     return (
-      <div className="mx-auto max-w-lg rounded-3xl bg-orange-300 shadow-xl">
+      <div className="mx-auto w-full max-w-lg rounded-3xl bg-orange-300 shadow-xl">
         <Link href={caseStudyPath}>
           <div className="relative h-64 w-full rounded-t-3xl bg-cover bg-center">
-            <Skeleton
+            {/*
               src={caseStudy.image}
               alt={caseStudy.name}
               fill
-              className="h-full w-full rounded-t-3xl object-cover object-center"
               sizes="(min-width: 1280px) 28.5rem, (min-width: 1024px) 37.5vw, (min-width: 640px) 32rem, calc(100vw - 2rem)"
-            />
+             */}
+            <Skeleton className="h-full w-full rounded-t-3xl object-cover object-center" />
           </div>
         </Link>
         <div className="items-center px-2 py-2 md:flex">
@@ -91,7 +94,11 @@ export const ArchivedCaseStudies = ({ caseStudies, categories }) => {
             {caseStudy.shortDescription}
           </p>
           <div className="mt-8 flex">
-            <SecondaryButton size="sm" href={caseStudyPath}>
+            <SecondaryButton
+              size="sm"
+              href={caseStudyPath}
+              className={undefined}
+            >
               Case study
             </SecondaryButton>
           </div>
@@ -124,7 +131,7 @@ export const ArchivedCaseStudies = ({ caseStudies, categories }) => {
             </div>
 
             {/* Filter */}
-            {[...categorieSet].map((category) => {
+            {categories.map((category) => {
               return (
                 <div key={`category-${category}`}>
                   <button

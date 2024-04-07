@@ -3,21 +3,21 @@ import clsx from "clsx";
 
 import { Skeleton } from "@/components/ui/skeleton";
 
-export const CaseStudyFeatures = ({ data }) => {
+export const CaseStudyFeatures = ({ translation }) => {
   return (
     <section className="px-4 py-12 sm:px-6 sm:pb-24 md:pt-16 lg:px-8">
       <div className="mx-auto max-w-screen-xl">
         {/* Section text */}
         <div className="mx-auto w-full max-w-xl text-center md:max-w-2xl lg:max-w-3xl">
           <p className="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-orange-400 to-orange-300 px-6 py-2 text-sm font-medium tracking-wide text-stone-700">
-            {data.tagline}
+            {translation.tagline}
           </p>
           <h2 className="mt-6 text-3xl font-extrabold text-stone-700 sm:text-4xl md:text-5xl">
-            {data.headline}
+            {translation.headline}
           </h2>
-          <p className="mt-6 text-xl text-stone-700">{data.text}</p>
+          <p className="mt-6 text-xl text-stone-700">{translation.text}</p>
         </div>
-        {data.features.map((feature, index) => (
+        {translation.features.map((feature, index) => (
           <div
             key={`case-study-feature-${index}`}
             className={clsx(
@@ -69,14 +69,13 @@ export const CaseStudyFeatures = ({ data }) => {
                 <div className="absolute inset-y-0 left-1/2 z-10 h-full w-1/2 rounded-r-3xl bg-orange-200" />
               </div>
               <div className="aspect-h-2 aspect-w-3 relative w-full">
-                {/* Feature image */}
-                <Skeleton
+                {/* Feature image 
                   src={feature.image.src}
                   alt={feature.image.alt}
                   fill
-                  className="absolute inset-0 z-30 h-full w-full rounded-3xl object-cover shadow-xl"
                   sizes="(min-width: 1280px) 38.5rem, (min-width: 1024px) calc(50vw - 3.5rem), (min-width: 640px) 32rem, calc(100vw - 2rem)"
-                />
+                */}
+                <Skeleton className="absolute inset-0 z-30 h-full w-full rounded-3xl object-cover shadow-xl" />
               </div>
             </div>
           </div>

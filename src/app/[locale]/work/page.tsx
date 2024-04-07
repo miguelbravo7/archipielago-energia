@@ -3,6 +3,7 @@ import { ArchivedCaseStudies } from "@/components/ArchivedCaseStudies";
 import { CallToAction } from "@/components/CallToAction";
 
 import { getAllCaseStudies, getCaseStudyCategories } from "@/lib/caseStudies";
+import { useTranslations } from "next-intl";
 
 export const metadata = {
   title: "Our work - Archipielago",
@@ -11,8 +12,9 @@ export const metadata = {
 };
 
 export default function CaseStudiesPage() {
-  const caseStudies = getAllCaseStudies();
-  const categories = getCaseStudyCategories();
+  const t = useTranslations("blog");
+  const caseStudies = getAllCaseStudies(t);
+  const categories = getCaseStudyCategories(t);
 
   return (
     <>
@@ -41,7 +43,7 @@ export default function CaseStudiesPage() {
 
       <ArchivedCaseStudies caseStudies={caseStudies} categories={categories} />
 
-      <CallToAction data={global.ctaSection} />
+      <CallToAction />
     </>
   );
 }

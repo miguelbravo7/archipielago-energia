@@ -3,22 +3,22 @@ import { Icon } from "@/components/Icon";
 
 import { Skeleton } from "@/components/ui/skeleton";
 
-export const CaseStudyHero = ({ data }) => {
+export const CaseStudyHero = ({ translations, image, imageName }) => {
   return (
     <section className="px-4 py-12 sm:px-6 md:py-16 lg:px-8">
       <div className="mx-auto max-w-screen-xl">
         {/* Hero text */}
         <div className="mx-auto w-full max-w-3xl text-center lg:max-w-5xl">
           <p className="inline-flex items-center justify-center rounded-r-full rounded-tl-full bg-gradient-to-r from-orange-400 to-orange-300 px-6 py-2 text-sm font-medium tracking-wide text-stone-700">
-            {data.hero.tagline}
+            {translations.tagline}
           </p>
           <h1 className="mt-4 text-4xl font-extrabold text-stone-700 sm:text-5xl md:mt-5 md:text-6xl">
-            {data.hero.headline}
+            {translations.headline}
           </h1>
         </div>
         {/* Features container */}
         <div className="mx-auto mt-12 grid w-full max-w-lg gap-10 lg:mt-16 lg:max-w-none lg:grid-cols-2 lg:gap-x-12">
-          {data.hero.keyPoints.slice(0, 3).map((item, index) => (
+          {translations.keyPoints.slice(0, 3).map((item, index) => (
             <div key={`case-study-key-point-${index}`} className="w-full">
               <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-orange-400 to-orange-300 shadow-xl">
                 <Icon name={item.icon} className="h-9 w-9 text-stone-700" />
@@ -43,15 +43,15 @@ export const CaseStudyHero = ({ data }) => {
             </div>
           ))}
         </div>
-        {/* Hero image */}
+        {/* Hero image
+          fill
+          src={image}
+          alt={imageName}
+          sizes="(min-width: 1280px) 80rem, (min-width: 1024px) calc(100vw - 4rem), calc(100vw - 3rem), calc(100vw - 2rem)"
+        
+        */}
         <div className="aspect-h-1 aspect-w-2 relative mx-auto mt-12 rounded-3xl shadow-xl lg:mt-16">
-          <Skeleton
-            className="absolute inset-0 h-full w-full rounded-3xl object-cover object-center align-middle"
-            fill
-            src={data.image}
-            alt={data.name}
-            sizes="(min-width: 1280px) 80rem, (min-width: 1024px) calc(100vw - 4rem), calc(100vw - 3rem), calc(100vw - 2rem)"
-          />
+          <Skeleton className="absolute inset-0 h-full w-full rounded-3xl object-cover object-center align-middle" />
         </div>
       </div>
     </section>
